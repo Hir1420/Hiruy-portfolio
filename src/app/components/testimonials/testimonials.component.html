@@ -1,0 +1,11 @@
+<div class="testimonials-section section-container">
+  <h2>What People Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial" *ngFor="let t of testimonials">
+      <img [src]="t.image" alt="{{ t.name }}">
+      <h3>{{ t.name }}</h3>
+      <p class="title">{{ t.title }}</p>
+      <p class="message">“{{ t.message }}”</p>
+    </div>
+  </div>
+</div>

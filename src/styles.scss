@@ -1,1 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.section-container {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  scroll-margin-top: 70px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #00796b;
+}
+
+
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3f51b5;
+  text-align: center;
+}
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+
+  a, button {
+    color: #00c9a7;
+  }
+
+  .project-card {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .hero {
+    background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  }
+}

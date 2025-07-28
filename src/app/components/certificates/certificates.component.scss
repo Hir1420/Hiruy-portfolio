@@ -1,0 +1,19 @@
+.section {
+  padding: 4rem 2rem;
+  background: #2c2f48;
+  color: white;
+
+  h2 {
+    color: #ff9800;
+    margin-bottom: 1.5rem;
+  }
+
+  .cert-list {
+    list-style: circle;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0.8rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<section id="skills" class="section skills-section" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="chip-container">
+    <div *ngFor="let skill of skills" class="skill-chip">
+      <span>{{ skill.name }}</span>
+      <div class="skill-bar">
+        <div class="skill-fill" [style.width.%]="skill.level"></div>
+      </div>
+    </div>
+  </div>
+</section>

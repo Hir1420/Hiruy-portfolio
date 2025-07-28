@@ -1,0 +1,26 @@
+.section {
+  padding: 4rem 2rem;
+  background: #fff;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.8rem;
+
+      a {
+        color: #0077cc;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
