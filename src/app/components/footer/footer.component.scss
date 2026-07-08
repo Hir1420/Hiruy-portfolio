@@ -1,7 +1,32 @@
-.footer {
-  padding: 1rem;
-  background-color: #1e1e2f;
-  text-align: center;
-  color: white;
-  font-size: 0.9rem;
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
 }
+
+.footer-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+.copyright, .built-with {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+

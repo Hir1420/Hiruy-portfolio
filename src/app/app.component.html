@@ -1,32 +1,37 @@
-<app-header>
-  <button class="dark-toggle" (click)="toggleDarkMode()">
-  {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
-</button>
-</app-header>
-<main>
+<app-header [isDarkMode]="isDarkMode" (toggleTheme)="toggleDarkMode()"></app-header>
+
+<main class="main-content">
   <section id="home">
     <app-hero></app-hero>
   </section>
+  
   <section id="about">
     <app-about></app-about>
   </section>
+  
   <section id="skills">
     <app-skills></app-skills>
   </section>
+  
   <section id="experience">
     <app-experience></app-experience>
   </section>
+  
   <section id="projects">
     <app-projects></app-projects>
   </section>
+  
   <section id="education">
     <app-education></app-education>
   </section>
+  
+  <section id="testimonials">
+    <app-testimonials></app-testimonials>
+  </section>
+  
   <section id="contact">
     <app-contact></app-contact>
   </section>
-  <section id="testimonials">
-  <app-testimonials></app-testimonials>
-</section>
 </main>
+
 <app-footer></app-footer>

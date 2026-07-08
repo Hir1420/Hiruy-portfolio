@@ -17,7 +17,7 @@ export class TestimonialsComponent {
       name: 'Anteneh Shumet',
       title: 'Senior Full Stack Developer',
       image: 'assets/testimonials/photo_2025-07-28_18-27-25.jpg',
-      message: 'His problem-solving skills and ability to debug in production under pressure is impressive.'
+      message: 'His problem solving skills and ability to debug in production under pressure is impressive.'
     },
     {
       name: 'Mikiyas Wubishet',

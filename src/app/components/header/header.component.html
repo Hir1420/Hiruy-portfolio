@@ -1,8 +1,24 @@
-<mat-toolbar color="primary" class="navbar">
-  <span class="logo">Hiruy Mengistu</span>
-  <span class="spacer"></span>
-  <button mat-button (click)="scrollToSection('about')">About</button>
-  <button mat-button (click)="scrollToSection('skills')">Skills</button>
-  <button mat-button (click)="scrollToSection('experience')">Experience</button>
-  <button mat-button (click)="scrollToSection('contact')">Contact</button>
-</mat-toolbar>
+<header class="header-container">
+  <nav class="glass-nav">
+    <div class="logo-area" (click)="scrollToSection('home')">
+      <span class="logo-symbol">H</span>
+      <span class="logo-text">Hiruy Mengistu</span>
+    </div>
+    
+    <div class="nav-links">
+      <button class="nav-btn" (click)="scrollToSection('about')">About</button>
+      <button class="nav-btn" (click)="scrollToSection('skills')">Tech Stack</button>
+      <button class="nav-btn" (click)="scrollToSection('experience')">Experience</button>
+      <button class="nav-btn" (click)="scrollToSection('projects')">Projects</button>
+      <button class="nav-btn" (click)="scrollToSection('testimonials')">Testimonials</button>
+      <button class="nav-btn" (click)="scrollToSection('contact')">Contact</button>
+    </div>
+
+    <div class="action-area">
+      <button class="theme-toggle-btn" (click)="onToggleTheme()" aria-label="Toggle theme">
+        <span class="material-icons" *ngIf="isDarkMode">light_mode</span>
+        <span class="material-icons" *ngIf="!isDarkMode">dark_mode</span>
+      </button>
+    </div>
+  </nav>
+</header>

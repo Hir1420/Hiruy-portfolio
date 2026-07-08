@@ -1,7 +1,43 @@
-<section id="experience" aos data-aos="fade-up">
-  <h2>Experience</h2>
-  <div class="card" *ngFor="let exp of experiences">
-    <h3>{{ exp.title }}</h3>
-    <p>{{ exp.description }}</p>
+<div class="experience-wrapper">
+  <h2 class="section-title">Professional <span>Timeline</span></h2>
+
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item" *ngFor="let exp of experiences" data-aos="fade-up">
+      <!-- Vertical Line Circle Node -->
+      <div class="timeline-node">
+        <div class="node-pulse"></div>
+        <div class="node-circle"></div>
+      </div>
+
+      <!-- Detail Card -->
+      <div class="timeline-card glass-card">
+        <div class="timeline-card-header">
+          <div class="title-block">
+            <h3 class="role-title">{{ exp.role }}</h3>
+            <h4 class="company-name">{{ exp.company }}</h4>
+          </div>
+          <div class="meta-block">
+            <span class="period-text">{{ exp.period }}</span>
+            <div class="location-badge">
+              <span class="material-icons">location_on</span>
+              <span>{{ exp.location }}</span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="highlights-list">
+          <li *ngFor="let highlight of exp.highlights">
+            <span class="bullet-indicator">&bull;</span>
+            <span class="highlight-text">{{ highlight }}</span>
+          </li>
+        </ul>
+
+        <div class="timeline-tech-stack">
+          <span class="badge" *ngFor="let tech of exp.tech">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>

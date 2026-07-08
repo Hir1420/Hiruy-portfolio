@@ -1,11 +1,17 @@
-<section id="skills" class="section skills-section" data-aos="fade-up">
-  <h2>Skills</h2>
-  <div class="chip-container">
-    <div *ngFor="let skill of skills" class="skill-chip">
-      <span>{{ skill.name }}</span>
-      <div class="skill-bar">
-        <div class="skill-fill" [style.width.%]="skill.level"></div>
+<div class="skills-wrapper">
+  <h2 class="section-title">Technical <span>Expertise</span></h2>
+
+  <div class="skills-grid">
+    <div class="category-card glass-card" *ngFor="let cat of skillCategories" data-aos="fade-up">
+      <div class="category-header">
+        <div class="icon-wrapper">
+          <span class="material-icons">{{ cat.icon }}</span>
+        </div>
+        <h3 class="category-title">{{ cat.title }}</h3>
+      </div>
+      <div class="skills-chips">
+        <span class="badge" *ngFor="let item of cat.items">{{ item }}</span>
       </div>
     </div>
   </div>
-</section>
+</div>

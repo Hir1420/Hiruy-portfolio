@@ -1,7 +1,61 @@
-<section class="hero" data-aos="fade-up">
-  <div class="container">
-    <h1>Hello, I'm <span>Hiruy Mengistu</span></h1>
-    <p>A Passionate Full Stack & Mobile Developer 🚀</p>
-    <a href="#projects" class="btn-primary">See My Work</a>
+<div class="hero-wrapper">
+  <!-- Decorative background glows -->
+  <div class="radial-glow glow-top"></div>
+  <div class="radial-glow glow-bottom"></div>
+
+  <div class="hero-container">
+    <div class="hero-content" data-aos="fade-up">
+      
+
+      <h1 class="hero-title">HIRUY MENGISTU</h1>
+      <h2 class="hero-subtitle">Full Stack Software Engineer</h2>
+      
+      <p class="hero-description">
+        Full Stack Software Engineer with 2+ years of professional experience building enterprise systems, ERP platforms, scalable web applications, cross platform mobile applications, and payment integrated software. Experienced working across government organizations, startups, and enterprise companies.
+      </p>
+
+      <div class="hero-actions">
+        <a href="assets/Hiruy_Mengistu_Resume.pdf" download class="btn btn-primary">
+          <span class="material-icons">download</span> Download Resume
+        </a>
+        <button (click)="scrollToSection('projects')" class="btn btn-secondary">
+          View Projects
+        </button>
+        <button (click)="scrollToSection('contact')" class="btn btn-text">
+          Contact Me <span class="arrow">&rarr;</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Premium Stat Cards Grid -->
+    <div class="stats-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-card glass-card">
+        <span class="stat-number">2+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      
+      <div class="stat-card glass-card">
+        <span class="stat-number">11+</span>
+        <span class="stat-label">Professional Projects</span>
+      </div>
+      
+      <div class="stat-card glass-card">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Companies</span>
+      </div>
+
+      <div class="stat-card glass-card span-full">
+        <div class="span-header">
+          <span class="material-icons">business_center</span>
+          <span class="span-title">Government + Startup + Enterprise Experience</span>
+        </div>
+        <div class="tech-stack-row">
+          <span class="badge">Flutter</span>
+          <span class="badge">Laravel</span>
+          <span class="badge">Next.js</span>
+          <span class="badge">ASP.NET</span>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>

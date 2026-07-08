@@ -1,28 +1,136 @@
-.section {
-  padding: 4rem 2rem;
-  background: #f0f4f8;
+.education-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-  h2 {
-    margin-bottom: 2rem;
+.education-card {
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+
+  .degree-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 4px;
   }
 
-  .edu {
-    background: white;
-    padding: 1.5rem;
-    border-left: 5px solid #ff9800;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  .university-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 0;
+  }
 
-    h4 {
-      margin: 0;
-    }
+  .period-location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
 
-    p {
-      margin: 0.3rem 0;
+    @media (max-width: 576px) {
+      align-items: flex-start;
+      text-align: left;
     }
+  }
 
-    ul {
-      padding-left: 1rem;
-      margin-top: 0.5rem;
-    }
+  .period-text {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .location-text {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
   }
 }
+
+.edu-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 2rem 0;
+}
+
+.edu-achievements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: var(--bg-card-element);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition-smooth);
+
+  .achievement-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.1em 0;
+    margin-bottom: 6px;
+  }
+
+  .achievement-label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+  }
+
+  &.highlight {
+    border-color: rgba(99, 102, 241, 0.25);
+    background: rgba(99, 102, 241, 0.02);
+
+    .achievement-value {
+      background: var(--brand-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .achievement-label {
+      color: var(--accent-color);
+    }
+  }
+
+  &:hover {
+    border-color: var(--border-hover);
+    background: var(--bg-card-element-hover);
+    transform: translateY(-2px);
+  }
+}
+

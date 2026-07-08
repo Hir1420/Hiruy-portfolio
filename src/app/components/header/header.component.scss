@@ -1,14 +1,123 @@
-.navbar {
-  position: sticky;
-  top: 0;
+.header-container {
+  position: fixed;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+.glass-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  background: var(--bg-card);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+
+  &:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg), 0 0 20px var(--glow-color);
+  }
 }
 
-.spacer {
-  flex: 1 1 auto;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  .logo-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--brand-gradient);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+  }
+
+  .logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
 }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: none; /* We can hide text links on small screens and leave contact/resume triggers visible */
+  }
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+
+  &:hover {
+    color: var(--text-primary);
+    background: var(--hover-bg);
+  }
+}
+
+.action-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-card-element);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+
+  &:hover {
+    background: var(--bg-card-element-hover);
+    border-color: var(--border-hover);
+    transform: rotate(15deg);
+  }
+
+  span {
+    font-size: 18px;
+  }
+}
