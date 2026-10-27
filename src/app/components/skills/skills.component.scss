@@ -45,13 +45,27 @@
       }
     }
 
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
     .category-title {
       font-family: var(--font-heading);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text-primary);
       margin: 0;
       letter-spacing: -0.02em;
+    }
+
+    .category-summary {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+      margin: 0;
     }
   }
 

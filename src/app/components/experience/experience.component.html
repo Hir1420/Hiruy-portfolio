@@ -15,7 +15,10 @@
       <div class="timeline-card glass-card">
         <div class="timeline-card-header">
           <div class="title-block">
-            <h3 class="role-title">{{ exp.role }}</h3>
+            <div class="role-type-row">
+              <h3 class="role-title">{{ exp.role }}</h3>
+              <span class="type-pill">{{ exp.type }}</span>
+            </div>
             <h4 class="company-name">{{ exp.company }}</h4>
           </div>
           <div class="meta-block">

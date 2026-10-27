@@ -8,39 +8,40 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
   skillCategories = [
     {
-      title: 'Languages',
-      icon: 'code',
-      items: ['C#', 'PHP', 'Dart', 'JavaScript', 'TypeScript', 'SQL']
+      title: 'Frontend Engineering',
+      icon: 'devices',
+      summary: 'Responsive component architecture, SSR rendering, and robust state management.',
+      items: ['React', 'Next.js', 'Angular', 'TypeScript', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Tailwind CSS', 'Angular Material']
     },
     {
-      title: 'Frontend Frameworks',
-      icon: 'layers',
-      items: ['React', 'Next.js', 'Angular', 'HTML5', 'CSS3', 'Tailwind CSS']
+      title: 'Backend & System APIs',
+      icon: 'dns',
+      summary: 'Modular micro-services, RESTful API design, validation schemas, and business logic.',
+      items: ['FastAPI (Python)', 'Node.js & Express', 'Laravel (PHP)', 'ASP.NET Core (C#)', 'REST APIs', 'Pydantic v2']
     },
     {
-      title: 'Backend Frameworks',
-      icon: 'terminal',
-      items: ['Laravel', 'ASP.NET', 'Node.js', 'Express.js']
+      title: 'AI Development & Safety Workflows',
+      icon: 'psychology',
+      summary: 'Grounding generative AI into deterministic systems with validation and guardrails.',
+      items: ['Google Gemini API', 'Structured Schemas (JSON/Pydantic)', 'Safety Triage Guardrails', 'Heuristic Fallbacks', 'Human-in-the-Loop Controls']
     },
     {
-      title: 'Mobile Development',
+      title: 'Mobile Engineering',
       icon: 'phone_android',
-      items: ['Flutter', 'Android']
+      summary: 'Cross-platform mobile applications with custom UI and native device features.',
+      items: ['Flutter', 'Dart', 'Cross-Platform UI', 'State Management', 'Offline Cache', 'Native API Interop']
     },
     {
-      title: 'Database Management',
+      title: 'Databases & Data Modeling',
       icon: 'storage',
-      items: ['MySQL', 'SQL Server']
+      summary: 'Relational data modeling, ACID transactions, audit logging, and query performance.',
+      items: ['PostgreSQL', 'MySQL', 'Microsoft SQL Server', 'SQLite (WAL Mode)', 'SQLAlchemy 2.0', 'Sequelize ORM']
     },
     {
-      title: 'Cloud & DevOps Tools',
-      icon: 'construction',
-      items: ['Firebase', 'GitHub Actions', 'Git', 'Postman', 'Figma']
-    },
-    {
-      title: 'Fintech & API Integrations',
-      icon: 'api',
-      items: ['REST APIs', 'Telebirr', 'Chapa']
+      title: 'Integrations, DevOps & Tools',
+      icon: 'terminal',
+      summary: 'Payment gateways, container orchestration, CI/CD, and automated testing.',
+      items: ['Telebirr Payment API', 'Chapa Gateway', 'USSD Workflows', 'Docker & Compose', 'Git & GitHub Actions', 'Postman', 'Pytest']
     }
   ];
 }

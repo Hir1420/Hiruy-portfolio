@@ -1,49 +1,122 @@
 <div class="projects-wrapper">
-  <h2 class="section-title">Featured <span>Projects</span></h2>
+  <div class="section-header-block" data-aos="fade-up">
+    <div class="section-kicker">ENGINEERING PORTFOLIO</div>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <p class="section-subtitle">
+      Real-world software systems spanning AI-powered automation, enterprise ERPs, cross-platform mobile apps, and high-volume payment integrations.
+    </p>
+  </div>
+
+  <!-- Flagship Featured Project: PitStop AI -->
+  <div class="flagship-card glass-card" data-aos="fade-up">
+    <div class="flagship-header">
+      <div class="badge-row">
+        <span class="flagship-badge">
+          <span class="material-icons">star</span> Flagship AI Project
+        </span>
+        <span class="badge category-tag">{{ flagshipProject.category }}</span>
+      </div>
+      <div class="header-actions">
+        <a [href]="flagshipProject.githubLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg class="btn-svg-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>View Repository</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="flagship-title-block">
+      <h3 class="flagship-title">{{ flagshipProject.title }}</h3>
+      <h4 class="flagship-tagline">{{ flagshipProject.tagline }}</h4>
+      <div class="role-pill">
+        <span class="material-icons">engineering</span>
+        <span>{{ flagshipProject.role }}</span>
+      </div>
+    </div>
+
+    <div class="problem-solution-grid">
+      <div class="ps-card">
+        <span class="ps-label">The Problem</span>
+        <p class="ps-text">{{ flagshipProject.problem }}</p>
+      </div>
+      <div class="ps-card solution">
+        <span class="ps-label">The Engineering Solution</span>
+        <p class="ps-text">{{ flagshipProject.solution }}</p>
+      </div>
+    </div>
+
+    <div class="features-subheading">Verified Implemented Capabilities:</div>
+    <div class="flagship-features-grid">
+      <div class="feature-item" *ngFor="let feat of flagshipProject.keyFeatures">
+        <div class="feat-icon">
+          <span class="material-icons">check_circle</span>
+        </div>
+        <div class="feat-content">
+          <h5 class="feat-title">{{ feat.title }}</h5>
+          <p class="feat-detail">{{ feat.detail }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-stack-container">
+      <span class="tech-header">Technical Architecture:</span>
+      <div class="project-tech-badges">
+        <span class="badge highlight-badge" *ngFor="let t of flagshipProject.tech">{{ t }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Engineering & Production Projects -->
+  <div class="grid-subheading-block">
+    <h3 class="subheading-title">Enterprise, Marketplace & Government Platforms</h3>
+    <p class="subheading-desc">Production systems delivered across government departments, startups, and commercial clients.</p>
+  </div>
 
   <div class="projects-grid">
     <div class="project-card glass-card" *ngFor="let project of projects" data-aos="fade-up">
-      <!-- Simulated OS UI Window Frame -->
-      <div class="project-visual">
-        <div class="window-header">
-          <div class="window-dots">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </div>
-          <div class="window-address">
-            <span class="material-icons">lock_outline</span>
-            <span class="url-text">{{ project.title.toLowerCase().replace(' ', '-') }}.dev</span>
-          </div>
-        </div>
-        <div class="window-body">
-          <div class="role-badge">{{ project.role }}</div>
-          <div class="visual-grid">
-            <div class="grid-cell fill-accent"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell"></div>
-            <div class="grid-cell fill-secondary"></div>
-          </div>
-        </div>
+      <div class="card-top-bar">
+        <span class="system-tag">{{ project.systemType }}</span>
+        <span class="company-tag">{{ project.company }}</span>
       </div>
 
-      <!-- Content Area -->
       <div class="project-details">
         <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-desc">{{ project.description }}</p>
+        <div class="project-role-badge">
+          <span class="material-icons">badge</span>
+          <span>{{ project.role }}</span>
+        </div>
+
+        <div class="project-narrative">
+          <div class="narrative-block">
+            <span class="narrative-label">Problem Context:</span>
+            <p class="narrative-text">{{ project.problem }}</p>
+          </div>
+
+          <div class="narrative-block">
+            <span class="narrative-label">Contribution:</span>
+            <p class="narrative-text">{{ project.contribution }}</p>
+          </div>
+        </div>
+
+        <div class="engineering-highlights-block">
+          <span class="highlights-title">Engineering Highlights:</span>
+          <ul class="highlights-list">
+            <li *ngFor="let dec of project.engineeringDecisions">
+              <span class="bullet">&bull;</span>
+              <span class="dec-text">{{ dec }}</span>
+            </li>
+          </ul>
+        </div>
 
         <div class="project-tech-badges">
           <span class="badge" *ngFor="let t of project.tech">{{ t }}</span>
         </div>
 
         <div class="project-footer">
-          <a *ngIf="project.liveLink" [href]="project.liveLink" target="_blank" class="btn btn-secondary btn-sm-link">
-            <span class="material-icons">open_in_new</span> Live Platform
-          </a>
-          
-          <div *ngIf="!project.liveLink" class="enterprise-tag">
-            <span class="material-icons">security</span>
-            <span>Enterprise System</span>
+          <div class="verified-tag">
+            <span class="material-icons">verified</span>
+            <span>Production Project</span>
           </div>
         </div>
       </div>
